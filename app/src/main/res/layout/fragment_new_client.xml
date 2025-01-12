@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.NewClientFragment"
+    android:fitsSystemWindows="true"
+    >
+
+    <android.widget.ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".NuevoClienteActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_titles"
+                android:text="@string/titleNuevoCliente"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/white"
+                />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/centroVertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5"
+                />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/titulo"
+                android:layout_marginVertical="@dimen/default_margin_V"
+                android:layout_marginHorizontal="@dimen/default_margin_H"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                app:errorEnabled="true">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:hint="@string/introduceUsuario"
+                    android:maxLength="9"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/nif"
+                android:layout_marginVertical="@dimen/default_margin_V"
+                android:layout_marginHorizontal="@dimen/default_margin_H"
+                app:endIconMode="password_toggle"
+                android:textColorHint="@color/white"
+                app:endIconTint="@color/white"
+                android:textColor="@color/white"
+                app:errorEnabled="true">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/introduceContrasenya"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:inputType="textPassword"
+                    android:maxLength="15"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/password1"
+                android:layout_marginVertical="@dimen/default_margin_V"
+                android:layout_marginHorizontal="@dimen/default_margin_H"
+                app:endIconMode="password_toggle"
+                android:textColorHint="@color/white"
+                app:endIconTint="@color/white"
+                android:textColor="@color/white"
+                app:errorEnabled="true">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/introduceContrasenya2"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:inputType="textPassword"
+                    android:maxLength="15"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/password2"
+                android:layout_marginVertical="@dimen/default_margin_V"
+                android:layout_marginHorizontal="@dimen/default_margin_H"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                app:errorEnabled="true">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:hint="@string/introduceTuNombre"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:inputType="textPersonName"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/apellidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/nombre"
+                android:layout_marginVertical="@dimen/default_margin_V"
+                android:layout_marginHorizontal="@dimen/default_margin_H"
+                app:errorEnabled="true"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/introduceApellidos"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/apellidos"
+                android:layout_marginVertical="@dimen/default_margin_V"
+                android:layout_marginHorizontal="@dimen/default_margin_H"
+                app:errorEnabled="true"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:hint="@string/introduceEmail"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:inputType="textEmailAddress"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConfirmar"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/confirmar"
+                app:layout_constraintTop_toBottomOf="@id/email"
+                app:layout_constraintEnd_toStartOf="@id/centroVertical"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginRight="20dp"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnVolver"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/volver"
+                app:layout_constraintTop_toBottomOf="@id/email"
+                app:layout_constraintStart_toStartOf="@id/centroVertical"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginLeft="20dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </android.widget.ScrollView>
+
+
+</FrameLayout>

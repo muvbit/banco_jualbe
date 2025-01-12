@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_vector"
+            android:iconTint="@color/white"
+            android:title="@string/inicio" />
+        <item
+            android:id="@+id/nav_accounts"
+            android:icon="@drawable/moneywallet_vector"
+            android:iconTint="@color/white"
+            android:title="@string/misCuentas" />
+        <item
+            android:id="@+id/nav_transfers"
+            android:icon="@drawable/transferencias_vector"
+            android:iconTint="@color/white"
+            android:title="@string/transferencias" />
+        <item
+            android:id="@+id/nav_cards"
+            android:icon="@drawable/creditcard_vector"
+            android:iconTint="@color/white"
+            android:title="@string/misTarjetas" />
+        <item
+            android:id="@+id/nav_operations"
+            android:icon="@drawable/operaciones_vector"
+            android:iconTint="@color/white"
+            android:title="@string/operaciones" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/configuration_vector"
+            android:iconTint="@color/white"
+            android:title="@string/configuracion" />
+    </group>
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/logout"
+                android:iconTint="@color/white"
+                android:title="@string/logout" />
+        </menu>
+
+    </item>
+
+</menu>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="176dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/headerbanco"
+    android:layout_gravity="top"
+    android:fitsSystemWindows="true">
+    <ImageView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/avatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/avatar"
+        android:layout_margin="30dp"
+        />
+    <TextView
+        android:id="@+id/nav_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="NOMBRE COMPLETO"
+        android:text="TU PUTA MADRE"
+        android:textSize="8pt"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/avatar"
+        app:layout_constraintTop_toTopOf="@+id/avatar"
+        app:layout_constraintBottom_toBottomOf="@+id/avatar"
+        android:layout_marginLeft="30dp"
+        />
+    <TextView
+        android:id="@+id/nav_nif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="00000000X"
+        app:layout_constraintStart_toEndOf="@+id/avatar"
+        app:layout_constraintTop_toBottomOf="@+id/nav_nombre"
+        android:layout_marginLeft="30dp"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

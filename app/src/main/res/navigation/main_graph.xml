@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="es.muvment.banco_jualbe.fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="es.muvment.banco_jualbe.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_newClientFragment"
+            app:destination="@id/newClientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="es.muvment.banco_jualbe.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_globalPositionFragment"
+            app:destination="@id/globalPositionFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_transfersFragment"
+            app:destination="@id/transfersFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_mainFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/globalPositionFragment"
+        android:name="es.muvment.banco_jualbe.fragments.GlobalPositionFragment"
+        android:label="fragment_global_position"
+        tools:layout="@layout/fragment_global_position" >
+        <action
+            android:id="@+id/action_globalPositionFragment_to_movementsFragment"
+            app:destination="@id/movementsFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="es.muvment.banco_jualbe.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/transfersFragment"
+        android:name="es.muvment.banco_jualbe.fragments.TransfersFragment"
+        android:label="fragment_transfers"
+        tools:layout="@layout/fragment_transfers" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/movementsFragment"
+        android:name="es.muvment.banco_jualbe.fragments.MovementsFragment"
+        android:label="fragment_movements"
+        tools:layout="@layout/fragment_movements" >
+        <argument
+            android:name="cuenta"
+            app:argType="es.muvment.banco_jualbe.pojo.Cuenta" />
+    </fragment>
+    <fragment
+        android:id="@+id/newClientFragment"
+        android:name="es.muvment.banco_jualbe.fragments.NewClientFragment"
+        android:label="fragment_new_client"
+        tools:layout="@layout/fragment_new_client" />
+</navigation>
