@@ -3,35 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
     tools:context=".fragments.MainFragment">
-    <androidx.drawerlayout.widget.DrawerLayout
-        android:theme="@style/Base.Theme.BANCOJUALBE"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/main"
-        android:fitsSystemWindows="true"
 
-        >
-        <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:id="@+id/toolbar"
-            android:background="@color/black"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            />
-        <com.google.android.material.navigation.NavigationView
-            android:id="@+id/nav_view"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:background="@drawable/headerbanco_background"
-            app:headerLayout="@layout/nav_header"
-            app:menu="@menu/nav_menu"
-            app:itemTextColor="@color/white"
-            />
         <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -393,7 +368,5 @@
 
             </ScrollView>
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
-    </androidx.drawerlayout.widget.DrawerLayout>
-
 
 </FrameLayout>

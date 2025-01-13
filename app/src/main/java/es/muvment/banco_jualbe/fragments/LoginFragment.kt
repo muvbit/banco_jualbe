@@ -10,6 +10,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.snackbar.Snackbar
+import es.muvment.banco_jualbe.MainActivity
 import es.muvment.banco_jualbe.R
 import es.muvment.banco_jualbe.bd.MiBancoOperacional
 import es.muvment.banco_jualbe.databinding.FragmentLoginBinding
@@ -47,9 +48,11 @@ class LoginFragment : Fragment() {
             clientePrueba = Cliente(0, usuario, "", "", contraseña, "")
             var cliente = banco?.login(clientePrueba)
             if (cliente != null) {
-                val action = findNavController().navigate(
-                    LoginFragmentDirections.actionLoginFragmentToMainFragment(cliente.getId())
-                )
+                findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToMainFragment(cliente.getId()))
+
+                val mainActivity=activity as? MainActivity
+                mainActivity?.clienteId=cliente.getId()
+                mainActivity?.updateNavHeader("${cliente.getNombre() + " "+cliente.getApellidos()}", cliente.getNif() as String)
 
             } else {
                 AlertDialog.Builder(requireContext())
