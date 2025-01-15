@@ -142,7 +142,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@id/saldoActual"
                         android:text="@string/ocultarSaldo"
-                        android:textSize="@dimen/default_text"
+                        android:textSize="5pt"
                         android:checked="true"
                         />
 

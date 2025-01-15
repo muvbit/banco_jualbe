@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="privacy">Privacidad</string>
+    <string name="nifVisual">Mostrar NIF</string>
+    <string name="showData">Ocultar datos al inicio</string>
+    <string name="showDataOff">Se mostrarán todos los datos al inicio</string>
+    <string name="showDataOn">Se ocultarán los datos al inicio o se mostrarán solo algunos</string>
+    <string name="showNif">Mostrar NIF</string>
+    <string name="showCurrentBalance">Show current balance</string>
+    <string name="system">Sistema</string>
+    <string name="language">Idioma</string>
+</resources>

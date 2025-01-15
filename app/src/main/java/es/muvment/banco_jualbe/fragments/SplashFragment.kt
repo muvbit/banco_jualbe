@@ -25,7 +25,7 @@ class SplashFragment : Fragment() {
         Handler(Looper.getMainLooper()).postDelayed({
             // Navegar al siguiente fragmento
             findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToLoginFragment())
-        }, 6000)
+        }, 4000)
     }
 
 

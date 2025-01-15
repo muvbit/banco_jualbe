@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import es.muvment.banco_jualbe.MainActivity
 import es.muvment.banco_jualbe.dao.ClienteDAO
+import es.muvment.banco_jualbe.dao.CuentaDAO
 import es.muvment.banco_jualbe.databinding.ActivityMainBinding
 import es.muvment.banco_jualbe.databinding.FragmentMainBinding
 import es.muvment.banco_jualbe.pojo.Cliente
@@ -46,6 +47,15 @@ class MainFragment : Fragment() {
                     (activity as? MainActivity)?.openDrawer()
                 }
 
+                saldoActual.text = "********* €"
+
+                swSaldo.setOnCheckedChangeListener { _, isChecked ->
+                    if (isChecked) {
+                        saldoActual.text = "********* €"
+                    } else saldoActual.text =
+                        CuentaDAO().getSaldoCuentasCliente(cliente).toString() + " €"
+                }
+
 
                 cardViewTransferencias.setOnClickListener {
                     findNavController().navigate(
@@ -55,7 +65,7 @@ class MainFragment : Fragment() {
 
                 cardViewConfiguracion.setOnClickListener {
                     findNavController().navigate(
-                        MainFragmentDirections.actionMainFragmentToSettingsFragment(cliente.getId())
+                        MainFragmentDirections.actionMainFragmentToSettingsFragment()
                     )
                 }
 
