@@ -37,9 +37,6 @@
             android:id="@+id/action_mainFragment_to_globalPositionFragment"
             app:destination="@id/globalPositionFragment" />
         <action
-            android:id="@+id/action_mainFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
-        <action
             android:id="@+id/action_mainFragment_to_transfersFragment"
             app:destination="@id/transfersFragment" />
         <argument
@@ -49,6 +46,9 @@
         <action
             android:id="@+id/action_mainFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/globalPositionFragment"
@@ -58,15 +58,6 @@
         <action
             android:id="@+id/action_globalPositionFragment_to_movementsFragment"
             app:destination="@id/movementsFragment" />
-        <argument
-            android:name="id"
-            app:argType="integer" />
-    </fragment>
-    <fragment
-        android:id="@+id/settingsFragment"
-        android:name="es.muvment.banco_jualbe.fragments.SettingsFragment"
-        android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" >
         <argument
             android:name="id"
             app:argType="integer" />
@@ -94,4 +85,8 @@
         android:name="es.muvment.banco_jualbe.fragments.NewClientFragment"
         android:label="fragment_new_client"
         tools:layout="@layout/fragment_new_client" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="es.muvment.banco_jualbe.fragments.SettingsFragment"
+        android:label="SettingsFragment" />
 </navigation>
