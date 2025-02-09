@@ -9,4 +9,7 @@
     <string name="showCurrentBalance">Show current balance</string>
     <string name="system">Sistema</string>
     <string name="language">Idioma</string>
+    <string name="allMovements">All</string>
+    <string name="inMovements">In movements</string>
+    <string name="outMovements">Out movements</string>
 </resources>

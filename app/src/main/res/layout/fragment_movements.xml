@@ -57,11 +57,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvCuenta"
             android:layout_marginHorizontal="@dimen/default_margin_H"
-            android:layout_marginVertical="@dimen/default_margin_V"
             tools:listitem="@layout/item_movements">
-
         </androidx.recyclerview.widget.RecyclerView>
 
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationMovements"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_movements_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </FrameLayout>

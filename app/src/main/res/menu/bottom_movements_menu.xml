@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/allMovements"
+    android:title="@string/allMovements"
+    android:icon="@drawable/allmovements"
+    />
+    <item
+        android:id="@+id/inmovements"
+        android:title="@string/inMovements"
+        android:icon="@drawable/flecha_ingreso"
+        />
+    <item
+        android:id="@+id/outmovements"
+        android:title="@string/outMovements"
+        android:icon="@drawable/flecha_gasto"
+        />
+</menu>

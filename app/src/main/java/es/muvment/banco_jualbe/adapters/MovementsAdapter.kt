@@ -21,14 +21,14 @@ class MovementsAdapter (private val movimientos : ArrayList<Movimiento>):
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = movimientos[position]
-        holder.render(item)
+        holder.renderAll(item)
     }
 
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val binding = ItemMovementsBinding.bind(view)
 
-        fun render(movimiento: Movimiento) {
+        fun renderAll(movimiento: Movimiento) {
             binding.run {
                 tvDescripcion.text = movimiento.getDescripcion()
                 tvImporte.text = movimiento.getImporte().toString()
@@ -47,6 +47,58 @@ class MovementsAdapter (private val movimientos : ArrayList<Movimiento>):
                         )
                     )
                 } else {
+                    imgImagen.setImageDrawable(
+                        ContextCompat.getDrawable(
+                            this.root.context,
+                            R.drawable.flecha_ingreso
+                        )
+                    )
+                    tvImporte.setTextColor(
+                        ContextCompat.getColor(
+                            binding.root.context,
+                            android.R.color.holo_green_light
+                        )
+                    )
+                }
+                cvMain.setOnClickListener {
+                    //IMPLEMENTAR EL CLICK EN UN ALERTDIALOG QUE MOSTRE DETALLS
+                }
+            }
+
+        }
+        fun renderOut(movimiento: Movimiento) {
+            binding.run {
+
+                if (movimiento.getImporte() < 0) {
+                    tvDescripcion.text = movimiento.getDescripcion()
+                    tvImporte.text = movimiento.getImporte().toString()
+                    fecha.text = movimiento.getFechaOperacion().toString()
+                    tvImporte.setTextColor(
+                        ContextCompat.getColor(
+                            binding.root.context,
+                            android.R.color.holo_red_dark
+                        )
+                    )
+                    imgImagen.setImageDrawable(
+                        ContextCompat.getDrawable(
+                            this.root.context,
+                            R.drawable.flecha_gasto
+                        )
+                    )
+                }
+                cvMain.setOnClickListener {
+                    //IMPLEMENTAR EL CLICK EN UN ALERTDIALOG QUE MOSTRE DETALLS
+                }
+            }
+
+        }
+
+        fun renderIn(movimiento: Movimiento) {
+            binding.run {
+                if (movimiento.getImporte() > 0) {
+                    tvDescripcion.text = movimiento.getDescripcion()
+                    tvImporte.text = movimiento.getImporte().toString()
+                    fecha.text = movimiento.getFechaOperacion().toString()
                     imgImagen.setImageDrawable(
                         ContextCompat.getDrawable(
                             this.root.context,
